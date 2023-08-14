@@ -1,0 +1,16 @@
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\bin\Debug\TPFinalNivel2_Sansberro.exe.config
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\bin\Debug\TPFinalNivel2_Sansberro.exe
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\bin\Debug\TPFinalNivel2_Sansberro.pdb
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.csproj.AssemblyReference.cache
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.Properties.Resources.resources
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.csproj.GenerateResource.cache
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.csproj.CoreCompileInputs.cache
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.exe
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.pdb
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\bin\Debug\Dominio.dll
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\bin\Debug\Negocio.dll
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\bin\Debug\Dominio.pdb
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\bin\Debug\Negocio.pdb
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.stock.resources
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.csproj.CopyComplete
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.AgregarProducto.resources
