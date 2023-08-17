@@ -45,6 +45,8 @@ namespace TPFinalNivel2_Sansberro
             this.lblCod = new System.Windows.Forms.Label();
             this.txtImagenUrl = new System.Windows.Forms.TextBox();
             this.lblImg = new System.Windows.Forms.Label();
+            this.pbxProd = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProd)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -188,6 +190,15 @@ namespace TPFinalNivel2_Sansberro
             this.lblImg.TabIndex = 17;
             this.lblImg.Text = "Imagen Url";
             // 
+            // pbxProd
+            // 
+            this.pbxProd.Location = new System.Drawing.Point(16, 264);
+            this.pbxProd.Name = "pbxProd";
+            this.pbxProd.Size = new System.Drawing.Size(201, 137);
+            this.pbxProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxProd.TabIndex = 18;
+            this.pbxProd.TabStop = false;
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -195,6 +206,7 @@ namespace TPFinalNivel2_Sansberro
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Teal;
             this.ClientSize = new System.Drawing.Size(418, 413);
+            this.Controls.Add(this.pbxProd);
             this.Controls.Add(this.lblImg);
             this.Controls.Add(this.txtImagenUrl);
             this.Controls.Add(this.lblCod);
@@ -219,6 +231,7 @@ namespace TPFinalNivel2_Sansberro
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Producto";
             this.Load += new System.EventHandler(this.AgregarProducto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +255,6 @@ namespace TPFinalNivel2_Sansberro
         private System.Windows.Forms.Label lblCod;
         private System.Windows.Forms.TextBox txtImagenUrl;
         private System.Windows.Forms.Label lblImg;
+        private System.Windows.Forms.PictureBox pbxProd;
     }
 }

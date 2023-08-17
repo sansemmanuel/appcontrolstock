@@ -13,9 +13,18 @@ namespace TPFinalNivel2_Sansberro
 {
     public partial class AgregarProducto : Form
     {
+
+        private producto Producto = null;
         public AgregarProducto()
         {
             InitializeComponent();
+        }
+
+        public AgregarProducto(producto Producto)
+        {
+            InitializeComponent();
+            this.Producto = Producto;
+
         }
 
         private void AgregarProducto_Load(object sender, EventArgs e)
@@ -27,7 +36,17 @@ namespace TPFinalNivel2_Sansberro
             {
                 cboMarca.DataSource = marcanegocio.Listar();
                 cboCat.DataSource = categorianegocio.Listar();
-
+                if(Producto != null)
+                {
+                    txtCod.Text = Producto.Codigo;
+                    /// 
+                    txtNombre.Text = Producto.Nombre;
+                    txtDesc.Text = Producto.Descripcion;
+                    txtPrecio.Text = Producto.Precio.ToString();
+                    
+                    txtImagenUrl.Text = Producto.ImagenUrl;
+                    cargarImagen(txtImagenUrl.Text);
+                }
             }
             catch (Exception ex)
             {
@@ -51,7 +70,7 @@ namespace TPFinalNivel2_Sansberro
             {
                 prod.Nombre = txtNombre.Text;
                 prod.Descripcion = txtDesc.Text;
-                prod.Precio = int.Parse(txtPrecio.Text);
+                prod.Precio = decimal.Parse(txtPrecio.Text);
                 prod.ImagenUrl = txtImagenUrl.Text;
                 prod.Codigo = txtCod.Text;
                 prod.IdCategoria = ((Elemento)cboCat.SelectedItem).Id;
@@ -65,6 +84,19 @@ namespace TPFinalNivel2_Sansberro
             {
 
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxProd.Load(imagen);
+
+            }
+            catch (Exception ex)
+            {
+                pbxProd.Load("https://w7.pngwing.com/pngs/507/59/png-transparent-dolphin-error-404-blue-marine-mammal-mammal.png");
             }
         }
     }

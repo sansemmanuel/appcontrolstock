@@ -83,6 +83,108 @@ namespace Negocio
                 datos.cerrarConexion();
             }
         }
+    
+        public void eliminar(int Id)
+        {
+            try
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @Id");
+                datos.setearParametro("@Id", Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public List<producto> filtrar(string campo, string criterio, string filtro)
+        {
+            List<producto> lista = new List<producto>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = "select A.Id,A.Codigo, A.Nombre, A.Descripcion, IdMarca, IdCategoria, A.ImagenUrl, A.Precio,M.Descripcion AS Marca, C.Descripcion AS Categoria FROM ARTICULOS A JOIN MARCAS M ON A.IdMarca = M.Id JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE ";
+                if(campo == "Precio")
+                {
+                    switch (criterio)
+                    {
+                        case "Mayor a":
+                            consulta += "Precio >" + filtro;
+                            break;
+                        case "Menor a":
+                            consulta += "Precio <" + filtro;
+                            break;
+                            default:
+                            consulta += "Precio =" + filtro;
+                            break;
+                    }
+                }
+                else if(campo == "Marca")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "M.Descripcion like'" + filtro + "%'";
+                            break;
+                        case "Contiene con":
+                            consulta += "M.Descripcion like'%" + filtro+ "'" ;
+                            break;
+                        default:
+                            consulta += "M.Descripcion like'%" + filtro + "%'";
+                            break;
+                    }
+                }
+                else if (campo == "Categoria")
+                {
+                    switch (criterio)
+                    {
+                       
+                      case "Comienza con":
+                            consulta += "C.Descripcion like'" + filtro + "%'";
+                            break;
+                        case "Contiene con":
+                            consulta += "C.Descripcion like'%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "C.Descripcion like'%" + filtro + "%'";
+                            break;
+                    }
+                }
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    producto aux = new producto();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.IdMarca = (int)datos.Lector["IdMarca"];
+                    aux.IdCategoria = (int)datos.Lector["IdCategoria"];
+                    aux.ImagenUrl = datos.Lector["ImagenUrl"] is DBNull ? null : (string)datos.Lector["ImagenUrl"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.Marca = (string)datos.Lector["Marca"];
+                    aux.Categoria = (string)datos.Lector["Categoria"];
+
+
+                    if (!(datos.Lector["ImagenUrl"] is DBNull))
+                        aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+
+
+
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 
  }
