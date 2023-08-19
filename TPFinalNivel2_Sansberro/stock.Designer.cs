@@ -60,7 +60,7 @@ namespace TPFinalNivel2_Sansberro
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.ReadOnly = true;
             this.dgvStock.Size = new System.Drawing.Size(644, 469);
-            this.dgvStock.TabIndex = 0;
+            this.dgvStock.TabIndex = 10;
             this.dgvStock.SelectionChanged += new System.EventHandler(this.dgvStock_SelectionChanged);
             // 
             // tbBuscar
@@ -68,7 +68,7 @@ namespace TPFinalNivel2_Sansberro
             this.tbBuscar.Location = new System.Drawing.Point(60, 17);
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(155, 20);
-            this.tbBuscar.TabIndex = 1;
+            this.tbBuscar.TabIndex = 0;
             this.tbBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbBuscar_KeyPress);
             // 
             // label1
@@ -85,7 +85,7 @@ namespace TPFinalNivel2_Sansberro
             this.btnAgregar.Location = new System.Drawing.Point(666, 136);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(193, 27);
-            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -95,7 +95,7 @@ namespace TPFinalNivel2_Sansberro
             this.btnMod.Location = new System.Drawing.Point(666, 169);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(193, 27);
-            this.btnMod.TabIndex = 4;
+            this.btnMod.TabIndex = 7;
             this.btnMod.Text = "Editar Articulo";
             this.btnMod.UseVisualStyleBackColor = true;
             this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
@@ -105,7 +105,7 @@ namespace TPFinalNivel2_Sansberro
             this.btnEliminar.Location = new System.Drawing.Point(666, 203);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(193, 27);
-            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar Articulo";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -115,9 +115,10 @@ namespace TPFinalNivel2_Sansberro
             this.btnDetalle.Location = new System.Drawing.Point(666, 236);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(193, 27);
-            this.btnDetalle.TabIndex = 6;
+            this.btnDetalle.TabIndex = 9;
             this.btnDetalle.Text = "Detalle de Articulo";
             this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // pbxProd
             // 
@@ -133,7 +134,7 @@ namespace TPFinalNivel2_Sansberro
             this.btnBuscar.Location = new System.Drawing.Point(508, 56);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(81, 20);
-            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -143,7 +144,7 @@ namespace TPFinalNivel2_Sansberro
             this.btnActualizar.Location = new System.Drawing.Point(666, 106);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(193, 24);
-            this.btnActualizar.TabIndex = 9;
+            this.btnActualizar.TabIndex = 5;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
@@ -172,7 +173,7 @@ namespace TPFinalNivel2_Sansberro
             this.txtFiltroAvanzado.Location = new System.Drawing.Point(508, 20);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
             this.txtFiltroAvanzado.Size = new System.Drawing.Size(81, 20);
-            this.txtFiltroAvanzado.TabIndex = 15;
+            this.txtFiltroAvanzado.TabIndex = 3;
             this.txtFiltroAvanzado.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
@@ -191,7 +192,7 @@ namespace TPFinalNivel2_Sansberro
             this.cbCampo.Location = new System.Drawing.Point(326, 18);
             this.cbCampo.Name = "cbCampo";
             this.cbCampo.Size = new System.Drawing.Size(121, 23);
-            this.cbCampo.TabIndex = 16;
+            this.cbCampo.TabIndex = 1;
             this.cbCampo.SelectedIndexChanged += new System.EventHandler(this.cbCampo_SelectedIndexChanged);
             // 
             // cbCriterio
@@ -201,7 +202,7 @@ namespace TPFinalNivel2_Sansberro
             this.cbCriterio.Location = new System.Drawing.Point(326, 53);
             this.cbCriterio.Name = "cbCriterio";
             this.cbCriterio.Size = new System.Drawing.Size(121, 23);
-            this.cbCriterio.TabIndex = 17;
+            this.cbCriterio.TabIndex = 2;
             this.cbCriterio.SelectedIndexChanged += new System.EventHandler(this.cbCriterio_SelectedIndexChanged);
             // 
             // stock

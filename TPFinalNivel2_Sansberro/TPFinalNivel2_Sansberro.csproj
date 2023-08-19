@@ -69,6 +69,9 @@
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="detalleProducto.resx">
+      <DependentUpon>detalleProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="stock.resx">
       <DependentUpon>stock.cs</DependentUpon>
     </EmbeddedResource>

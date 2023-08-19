@@ -104,21 +104,21 @@ namespace TPFinalNivel2_Sansberro
             this.txtNombre.Location = new System.Drawing.Point(96, 71);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(310, 23);
-            this.txtNombre.TabIndex = 5;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtDesc
             // 
             this.txtDesc.Location = new System.Drawing.Point(96, 100);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(310, 23);
-            this.txtDesc.TabIndex = 6;
+            this.txtDesc.TabIndex = 2;
             // 
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(96, 187);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(310, 23);
-            this.txtPrecio.TabIndex = 9;
+            this.txtPrecio.TabIndex = 5;
             // 
             // cboCat
             // 
@@ -126,14 +126,14 @@ namespace TPFinalNivel2_Sansberro
             this.cboCat.Location = new System.Drawing.Point(96, 158);
             this.cboCat.Name = "cboCat";
             this.cboCat.Size = new System.Drawing.Size(121, 25);
-            this.cboCat.TabIndex = 10;
+            this.cboCat.TabIndex = 4;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(250, 378);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 11;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -143,7 +143,7 @@ namespace TPFinalNivel2_Sansberro
             this.btnCancelar.Location = new System.Drawing.Point(331, 378);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 12;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -154,7 +154,7 @@ namespace TPFinalNivel2_Sansberro
             this.cboMarca.Location = new System.Drawing.Point(96, 129);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 25);
-            this.cboMarca.TabIndex = 13;
+            this.cboMarca.TabIndex = 3;
             this.cboMarca.SelectedIndexChanged += new System.EventHandler(this.cboMarca_SelectedIndexChanged);
             // 
             // txtCod
@@ -162,7 +162,7 @@ namespace TPFinalNivel2_Sansberro
             this.txtCod.Location = new System.Drawing.Point(96, 42);
             this.txtCod.Name = "txtCod";
             this.txtCod.Size = new System.Drawing.Size(310, 23);
-            this.txtCod.TabIndex = 14;
+            this.txtCod.TabIndex = 0;
             // 
             // lblCod
             // 
@@ -179,7 +179,7 @@ namespace TPFinalNivel2_Sansberro
             this.txtImagenUrl.Location = new System.Drawing.Point(96, 216);
             this.txtImagenUrl.Name = "txtImagenUrl";
             this.txtImagenUrl.Size = new System.Drawing.Size(310, 23);
-            this.txtImagenUrl.TabIndex = 16;
+            this.txtImagenUrl.TabIndex = 6;
             // 
             // lblImg
             // 

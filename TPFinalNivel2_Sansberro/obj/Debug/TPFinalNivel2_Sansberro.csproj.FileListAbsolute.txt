@@ -14,3 +14,4 @@ C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\bin\Debug\Negocio.pdb
 C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.stock.resources
 C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.csproj.CopyComplete
 C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.AgregarProducto.resources
+C:\Users\emmanuel\Desktop\TPFinalNivel2_Sansberro\obj\Debug\TPFinalNivel2_Sansberro.detalleProducto.resources

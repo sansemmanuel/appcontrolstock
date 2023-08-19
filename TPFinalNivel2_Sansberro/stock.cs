@@ -226,5 +226,22 @@ namespace TPFinalNivel2_Sansberro
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            if (dgvStock.SelectedRows.Count > 0)
+            {
+                producto selectedProduct = dgvStock.SelectedRows[0].DataBoundItem as producto;
+                if (selectedProduct != null)
+                {
+                    detalleProducto detailForm = new detalleProducto(selectedProduct);
+                    detailForm.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un producto para ver el detalle.", "No ha seleccionado ningun producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }
