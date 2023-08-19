@@ -30,7 +30,7 @@ The Product Inventory Management App is a simple desktop application built to ma
 - .NET Framework
 - Windows Forms
 
-#SQLServer Script
+##SQLServer Script
   use master
 go
 create database CATALOGO_DB
