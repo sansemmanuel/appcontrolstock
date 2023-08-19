@@ -55,7 +55,7 @@ namespace TPFinalNivel2_Sansberro
             this.dgvStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStock.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvStock.Location = new System.Drawing.Point(12, 37);
+            this.dgvStock.Location = new System.Drawing.Point(12, 106);
             this.dgvStock.MultiSelect = false;
             this.dgvStock.Name = "dgvStock";
             this.dgvStock.ReadOnly = true;
@@ -65,7 +65,7 @@ namespace TPFinalNivel2_Sansberro
             // 
             // tbBuscar
             // 
-            this.tbBuscar.Location = new System.Drawing.Point(704, 37);
+            this.tbBuscar.Location = new System.Drawing.Point(60, 17);
             this.tbBuscar.Name = "tbBuscar";
             this.tbBuscar.Size = new System.Drawing.Size(155, 20);
             this.tbBuscar.TabIndex = 1;
@@ -74,7 +74,7 @@ namespace TPFinalNivel2_Sansberro
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(662, 40);
+            this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 15);
             this.label1.TabIndex = 2;
@@ -82,7 +82,7 @@ namespace TPFinalNivel2_Sansberro
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(666, 142);
+            this.btnAgregar.Location = new System.Drawing.Point(666, 136);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(193, 27);
             this.btnAgregar.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace TPFinalNivel2_Sansberro
             // 
             // btnMod
             // 
-            this.btnMod.Location = new System.Drawing.Point(666, 175);
+            this.btnMod.Location = new System.Drawing.Point(666, 169);
             this.btnMod.Name = "btnMod";
             this.btnMod.Size = new System.Drawing.Size(193, 27);
             this.btnMod.TabIndex = 4;
@@ -102,7 +102,7 @@ namespace TPFinalNivel2_Sansberro
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(666, 209);
+            this.btnEliminar.Location = new System.Drawing.Point(666, 203);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(193, 27);
             this.btnEliminar.TabIndex = 5;
@@ -112,7 +112,7 @@ namespace TPFinalNivel2_Sansberro
             // 
             // btnDetalle
             // 
-            this.btnDetalle.Location = new System.Drawing.Point(666, 242);
+            this.btnDetalle.Location = new System.Drawing.Point(666, 236);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(193, 27);
             this.btnDetalle.TabIndex = 6;
@@ -121,7 +121,7 @@ namespace TPFinalNivel2_Sansberro
             // 
             // pbxProd
             // 
-            this.pbxProd.Location = new System.Drawing.Point(666, 276);
+            this.pbxProd.Location = new System.Drawing.Point(666, 345);
             this.pbxProd.Name = "pbxProd";
             this.pbxProd.Size = new System.Drawing.Size(193, 230);
             this.pbxProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,9 +130,9 @@ namespace TPFinalNivel2_Sansberro
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(287, 552);
+            this.btnBuscar.Location = new System.Drawing.Point(508, 56);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(81, 20);
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -140,9 +140,9 @@ namespace TPFinalNivel2_Sansberro
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(784, 63);
+            this.btnActualizar.Location = new System.Drawing.Point(666, 106);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.Size = new System.Drawing.Size(193, 24);
             this.btnActualizar.TabIndex = 9;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
@@ -151,16 +151,16 @@ namespace TPFinalNivel2_Sansberro
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 521);
+            this.label2.Location = new System.Drawing.Point(262, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 15);
+            this.label2.Size = new System.Drawing.Size(58, 15);
             this.label2.TabIndex = 10;
-            this.label2.Text = "Campo";
+            this.label2.Text = "Buscar Por";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 557);
+            this.label3.Location = new System.Drawing.Point(262, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 12;
@@ -169,26 +169,26 @@ namespace TPFinalNivel2_Sansberro
             // 
             // txtFiltroAvanzado
             // 
-            this.txtFiltroAvanzado.Location = new System.Drawing.Point(287, 521);
+            this.txtFiltroAvanzado.Location = new System.Drawing.Point(508, 20);
             this.txtFiltroAvanzado.Name = "txtFiltroAvanzado";
-            this.txtFiltroAvanzado.Size = new System.Drawing.Size(100, 20);
+            this.txtFiltroAvanzado.Size = new System.Drawing.Size(81, 20);
             this.txtFiltroAvanzado.TabIndex = 15;
             this.txtFiltroAvanzado.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(201, 521);
+            this.label4.Location = new System.Drawing.Point(471, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 15);
+            this.label4.Size = new System.Drawing.Size(31, 15);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Filtro Avanzado";
+            this.label4.Text = "Valor";
             // 
             // cbCampo
             // 
             this.cbCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCampo.FormattingEnabled = true;
-            this.cbCampo.Location = new System.Drawing.Point(58, 518);
+            this.cbCampo.Location = new System.Drawing.Point(326, 18);
             this.cbCampo.Name = "cbCampo";
             this.cbCampo.Size = new System.Drawing.Size(121, 23);
             this.cbCampo.TabIndex = 16;
@@ -198,10 +198,11 @@ namespace TPFinalNivel2_Sansberro
             // 
             this.cbCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCriterio.FormattingEnabled = true;
-            this.cbCriterio.Location = new System.Drawing.Point(58, 553);
+            this.cbCriterio.Location = new System.Drawing.Point(326, 53);
             this.cbCriterio.Name = "cbCriterio";
             this.cbCriterio.Size = new System.Drawing.Size(121, 23);
             this.cbCriterio.TabIndex = 17;
+            this.cbCriterio.SelectedIndexChanged += new System.EventHandler(this.cbCriterio_SelectedIndexChanged);
             // 
             // stock
             // 

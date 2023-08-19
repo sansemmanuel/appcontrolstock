@@ -100,15 +100,18 @@ namespace Negocio
             }
         }
 
+      
+      
         public List<producto> filtrar(string campo, string criterio, string filtro)
         {
             List<producto> lista = new List<producto>();
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string consulta = "select A.Id,A.Codigo, A.Nombre, A.Descripcion, IdMarca, IdCategoria, A.ImagenUrl, A.Precio,M.Descripcion AS Marca, C.Descripcion AS Categoria FROM ARTICULOS A JOIN MARCAS M ON A.IdMarca = M.Id JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE ";
+                string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, IdMarca, IdCategoria, A.ImagenUrl, A.Precio, M.Descripcion AS Marca, C.Descripcion AS Categoria FROM ARTICULOS A JOIN MARCAS M ON A.IdMarca = M.Id JOIN CATEGORIAS C ON A.IdCategoria = C.Id";
                 if(campo == "Precio")
                 {
+                    consulta += " WHERE ";
                     switch (criterio)
                     {
                         case "Mayor a":
@@ -124,32 +127,35 @@ namespace Negocio
                 }
                 else if(campo == "Marca")
                 {
+                    consulta += " WHERE ";
                     switch (criterio)
                     {
-                        case "Comienza con":
-                            consulta += "M.Descripcion like'" + filtro + "%'";
-                            break;
-                        case "Contiene con":
-                            consulta += "M.Descripcion like'%" + filtro+ "'" ;
+                        case "Samsung":
+                        case "Apple":
+                        case "Sony":
+                        case "Huawei":
+                        case "Motorola":
+                            consulta += " M.Descripcion = '" + criterio + "'";
                             break;
                         default:
-                            consulta += "M.Descripcion like'%" + filtro + "%'";
+                            //
                             break;
                     }
                 }
                 else if (campo == "Categoria")
                 {
+                    consulta += " WHERE ";
                     switch (criterio)
                     {
-                       
-                      case "Comienza con":
-                            consulta += "C.Descripcion like'" + filtro + "%'";
-                            break;
-                        case "Contiene con":
-                            consulta += "C.Descripcion like'%" + filtro + "'";
+                        case "Celulares":
+                        case "Televisores":
+                        case "Media":
+                        case "Audio":
+                        
+                            consulta += " C.Descripcion = '" + criterio + "'";
                             break;
                         default:
-                            consulta += "C.Descripcion like'%" + filtro + "%'";
+                            //
                             break;
                     }
                 }

@@ -99,5 +99,11 @@ namespace TPFinalNivel2_Sansberro
                 pbxProd.Load("https://w7.pngwing.com/pngs/507/59/png-transparent-dolphin-error-404-blue-marine-mammal-mammal.png");
             }
         }
+
+        private void cboMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
     }
 }

@@ -155,6 +155,7 @@ namespace TPFinalNivel2_Sansberro
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 25);
             this.cboMarca.TabIndex = 13;
+            this.cboMarca.SelectedIndexChanged += new System.EventHandler(this.cboMarca_SelectedIndexChanged);
             // 
             // txtCod
             // 

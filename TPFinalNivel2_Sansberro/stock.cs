@@ -14,6 +14,7 @@ namespace TPFinalNivel2_Sansberro
     public partial class stock : Form
     {
         private List<producto> listaProducto;
+      
         public stock()
         {
             InitializeComponent();
@@ -21,12 +22,17 @@ namespace TPFinalNivel2_Sansberro
 
         private void stock_Load(object sender, EventArgs e)
         {
+
             cargar();
+            
             cbCampo.Items.Add("Marca");
             cbCampo.Items.Add("Precio");
             cbCampo.Items.Add("Categoria");
-
+            
         }
+
+
+       
         private void cargar()
         {
             productoNegocio negocio = new productoNegocio();
@@ -117,6 +123,9 @@ namespace TPFinalNivel2_Sansberro
             }
         }
 
+
+
+
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             productoNegocio negocio = new productoNegocio();
@@ -161,11 +170,6 @@ namespace TPFinalNivel2_Sansberro
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
@@ -174,20 +178,52 @@ namespace TPFinalNivel2_Sansberro
         private void cbCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             string opcion = cbCampo.SelectedItem.ToString();
-            if(opcion == "Marca" || opcion == "Categoria")
+            if(opcion == "Categoria" )
             {
                 cbCriterio.Items.Clear();
-                cbCriterio.Items.Add("Comienza con");
-                cbCriterio.Items.Add("Contiene");
-                cbCriterio.Items.Add("Termina con");
+                cbCriterio.Items.Add("Celulares");
+                cbCriterio.Items.Add("Televisores");
+                cbCriterio.Items.Add("Media");
+                cbCriterio.Items.Add("Audio");
+                  
+            }
+            else if(opcion == "Marca")
+            {
+                cbCriterio.Items.Clear();
+                cbCriterio.Items.Add("Samsung");
+                cbCriterio.Items.Add("Apple");
+                cbCriterio.Items.Add("Sony");
+                cbCriterio.Items.Add("Huawei");
+                cbCriterio.Items.Add("Motorola");
+
+                
+
+
             }
             else
             {
                 cbCriterio.Items.Clear();
                 cbCriterio.Items.Add("Menor a");
                 cbCriterio.Items.Add("Mayor a");
+            }
+        }
 
 
+        
+        private void cbCriterio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            productoNegocio negocio = new productoNegocio();
+            try
+            {
+
+                string Categoria = cbCriterio.SelectedItem.ToString();
+                string Marca = cbCriterio.SelectedItem.ToString();
+                string Precio = txtFiltroAvanzado.ToString();
+                dgvStock.DataSource = negocio.filtrar(Categoria, Marca,Precio);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
             }
         }
     }

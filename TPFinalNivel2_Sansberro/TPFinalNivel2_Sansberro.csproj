@@ -52,6 +52,12 @@
     <Compile Include="AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="detalleProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detalleProducto.Designer.cs">
+      <DependentUpon>detalleProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="stock.cs">
       <SubType>Form</SubType>
     </Compile>
