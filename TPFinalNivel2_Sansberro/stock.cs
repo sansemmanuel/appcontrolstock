@@ -129,18 +129,42 @@ namespace TPFinalNivel2_Sansberro
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             productoNegocio negocio = new productoNegocio();
-            try
+            if (cbCampo.SelectedItem != null && cbCriterio.SelectedItem != null)
             {
                 string campo = cbCampo.SelectedItem.ToString();
                 string criterio = cbCriterio.SelectedItem.ToString();
                 string filtro = txtFiltroAvanzado.Text;
-                dgvStock.DataSource = negocio.filtrar(campo, criterio, filtro);
-            }
-            catch (Exception ex)
-            {
+                if (campo == "Precio" && !EsNumeroValido(filtro))
 
-                MessageBox.Show(ex.ToString());
+                {
+                    MessageBox.Show("El filtro de precio debe ser un número válido.");
+                    return;
+
+                }
+                try
+                {
+                    dgvStock.DataSource = negocio.filtrar(campo, criterio, filtro);
+                }
+
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                }
+                
             }
+            else
+            {
+                MessageBox.Show("Seleccione campo y criterio para realizar su busqueda!");
+            }
+
+
+
+
+        }
+        private bool EsNumeroValido(string texto)
+        {
+            return decimal.TryParse(texto, out _);
         }
 
         private void tbBuscar_KeyPress(object sender, KeyPressEventArgs e)
@@ -185,7 +209,7 @@ namespace TPFinalNivel2_Sansberro
                 cbCriterio.Items.Add("Televisores");
                 cbCriterio.Items.Add("Media");
                 cbCriterio.Items.Add("Audio");
-                  
+                txtFiltroAvanzado.Enabled = false;
             }
             else if(opcion == "Marca")
             {
@@ -195,8 +219,8 @@ namespace TPFinalNivel2_Sansberro
                 cbCriterio.Items.Add("Sony");
                 cbCriterio.Items.Add("Huawei");
                 cbCriterio.Items.Add("Motorola");
+                txtFiltroAvanzado.Enabled = false;
 
-                
 
 
             }
@@ -205,6 +229,7 @@ namespace TPFinalNivel2_Sansberro
                 cbCriterio.Items.Clear();
                 cbCriterio.Items.Add("Menor a");
                 cbCriterio.Items.Add("Mayor a");
+                txtFiltroAvanzado.Enabled = true;
             }
         }
 
@@ -219,7 +244,7 @@ namespace TPFinalNivel2_Sansberro
                 string Categoria = cbCriterio.SelectedItem.ToString();
                 string Marca = cbCriterio.SelectedItem.ToString();
                 string Precio = txtFiltroAvanzado.ToString();
-                dgvStock.DataSource = negocio.filtrar(Categoria, Marca,Precio);
+                dgvStock.DataSource = negocio.filtrar(Categoria,Marca,Precio);
             }
             catch (Exception ex)
             {

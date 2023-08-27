@@ -38,15 +38,14 @@ namespace TPFinalNivel2_Sansberro
                 cboCat.DataSource = categorianegocio.Listar();
                 if(Producto != null)
                 {
-                    txtCod.Text = Producto.Codigo;
-                    /// 
-                    txtNombre.Text = Producto.Nombre;
-                    txtDesc.Text = Producto.Descripcion;
-                    txtPrecio.Text = Producto.Precio.ToString();
-                    
-                    txtImagenUrl.Text = Producto.ImagenUrl;
+                    CargarTextoNoNulo(txtCod, Producto.Codigo, "Código");
+                    CargarTextoNoNulo(txtNombre, Producto.Nombre, "Nombre");
+                    CargarTextoNoNulo(txtDesc, Producto.Descripcion, "Descripcion");
+                    CargarNumeroNoNulo(txtPrecio, Producto.Precio, "Precio");
+                    CargarTextoNoNulo(txtImagenUrl, Producto.ImagenUrl, "URL de Imagen");
                     cargarImagen(txtImagenUrl.Text);
                 }
+               
             }
             catch (Exception ex)
             {
@@ -54,7 +53,29 @@ namespace TPFinalNivel2_Sansberro
                 MessageBox.Show(ex.ToString());
             }
         }
+        private void CargarTextoNoNulo(TextBox textBox, string valor, string campo)
+        {
+            if (!string.IsNullOrEmpty(valor))
+            {
+                textBox.Text = valor;
+            }
+            else
+            {
+                MessageBox.Show($"El campo {campo} no se ha logrado cargar");
+            }
+        }
 
+        private void CargarNumeroNoNulo(TextBox textBox, decimal? valor, string campo)
+        {
+            if (valor.HasValue)
+            {
+                textBox.Text = valor.Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show($"El campo {campo} no se ha logrado cargar");
+            }
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -62,29 +83,55 @@ namespace TPFinalNivel2_Sansberro
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            producto prod = new producto();
-            productoNegocio negocio = new productoNegocio();
-            CategoriaNegocio negocio1 = new CategoriaNegocio();
-            MarcaNegocio negocio2 = new MarcaNegocio();
-            try
+            if (CamposValidos())
             {
-                prod.Nombre = txtNombre.Text;
-                prod.Descripcion = txtDesc.Text;
-                prod.Precio = decimal.Parse(txtPrecio.Text);
-                prod.ImagenUrl = txtImagenUrl.Text;
-                prod.Codigo = txtCod.Text;
-                prod.IdCategoria = ((Elemento)cboCat.SelectedItem).Id;
-                prod.IdMarca = ((Elemento)cboMarca.SelectedItem).Id;
+                producto prod = new producto();
+                productoNegocio negocio = new productoNegocio();
+                CategoriaNegocio negocio1 = new CategoriaNegocio();
+                MarcaNegocio negocio2 = new MarcaNegocio();
+                try
+                {
+                    prod.Nombre = txtNombre.Text;
+                    prod.Descripcion = txtDesc.Text;
+                    prod.Precio = decimal.Parse(txtPrecio.Text);
+                    prod.ImagenUrl = txtImagenUrl.Text;
+                    prod.Codigo = txtCod.Text;
+                    prod.IdCategoria = ((Elemento)cboCat.SelectedItem).Id;
+                    prod.IdMarca = ((Elemento)cboMarca.SelectedItem).Id;
 
-                negocio.agregar(prod); ///
-                MessageBox.Show("Agregado exitosamente");
-                Close();
+                    negocio.agregar(prod); ///
+                    MessageBox.Show("Agregado exitosamente");
+                    Close();
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                }
             }
-            catch (Exception ex)
+            else
             {
-
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Por favor verifique que los valores ingresados sean validos");
             }
+        }
+        private bool CamposValidos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
+                string.IsNullOrWhiteSpace(txtDesc.Text) ||
+                string.IsNullOrWhiteSpace(txtPrecio.Text) ||
+                cboCat.SelectedItem == null ||
+                cboMarca.SelectedItem == null)
+            {
+                return false;
+            }
+
+            if (!decimal.TryParse(txtPrecio.Text, out _))
+            {
+                MessageBox.Show("El precio debe ser un valor numérico válido.");
+                return false;
+            }
+
+            return true;
         }
 
         private void cargarImagen(string imagen)
